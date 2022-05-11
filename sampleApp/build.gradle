@@ -11,6 +11,11 @@ android {
         versionCode 2
         versionName "3.10.1"
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {

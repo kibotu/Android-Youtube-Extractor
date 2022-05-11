@@ -1,10 +1,13 @@
-Android based YouTube url extractor [![Build Status](https://app.travis-ci.com/kibotu/android-youtubeExtractor.svg?branch=master)](https://app.travis-ci.com/kibotu/android-youtubeExtractor)
+[![Donation](https://img.shields.io/badge/buy%20me%20a%20coffee-brightgreen.svg)](https://www.paypal.me/janrabe/5) [![About Jan Rabe](https://img.shields.io/badge/about-me-green.svg)](https://about.me/janrabe)
+# Android based YouTube url extractor [![](https://jitpack.io/v/kibotu/Android-Youtube-Extractor.svg)](https://jitpack.io/#kibotu/Android-Youtube-Extractor) [![](https://jitpack.io/v/kibotu/Android-Youtube-Extractor/month.svg)](https://jitpack.io/#kibotu/Android-Youtube-Extractor) [![Hits-of-Code](https://hitsofcode.com/github/kibotu/Android-Youtube-Extractor)](https://hitsofcode.com/view/github/kibotu/Android-Youtube-Extractor) [![Javadoc](https://img.shields.io/badge/javadoc-SNAPSHOT-green.svg)](https://jitpack.io/com/github/kibotu/Android-Youtube-Extractor/master-SNAPSHOT/javadoc/index.html) [![Build Status](https://app.travis-ci.com/kibotu/Android-Youtube-Extractor.svg?branch=master)](https://app.travis-ci.com/kibotu/Android-Youtube-Extractor) [![Gradle Version](https://img.shields.io/badge/gradle-7.4.2-green.svg)](https://docs.gradle.org/current/release-notes) [![androidx](https://img.shields.io/badge/androidx-brightgreen.svg)](https://developer.android.com/topic/libraries/support-library/refactor)
+
+
+ [![](https://jitpack.io/v/kibotu/Android-Youtube-Extractor.svg)](https://jitpack.io/#kibotu/Android-Youtube-Extractor) [![Build Status](https://app.travis-ci.com/kibotu/android-youtubeExtractor.svg?branch=master)](https://app.travis-ci.com/kibotu/android-youtubeExtractor)
 =======================================================
 
 These are the urls to the YouTube video or audio files, so you can stream or download them.
 It features an age verification circumvention and a signature deciphering method (mainly for vevo videos).
 
-* Builds: [![](https://jitpack.io/v/kibotu/Android-Youtube-Extractor.svg)](https://jitpack.io/#kibotu/Android-Youtube-Extractor)
 * Dependency: [js-evaluator-for-android](https://github.com/evgenyneu/js-evaluator-for-android)
 
 ## Gradle

@@ -1,12 +1,18 @@
 package at.huber.youtubeExtractor;
 
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertNotNull;
+import static junit.framework.TestCase.assertNotSame;
+
 import android.os.Handler;
 import android.os.Looper;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.filters.FlakyTest;
-import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 import android.util.SparseArray;
+
+import androidx.test.InstrumentationRegistry;
+import androidx.test.filters.FlakyTest;
+import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,11 +22,6 @@ import java.net.URL;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertNotNull;
-import static junit.framework.TestCase.assertNotSame;
 
 @RunWith(AndroidJUnit4.class)
 @FlakyTest
@@ -94,7 +95,7 @@ public class ExtractorTestCases {
                         }
                         itag = ytFiles.keyAt(new Random().nextInt(ytFiles.size() - numNotDash) + numNotDash);
                         testUrl = ytFiles.get(itag).getUrl();
-                        Log.d(EXTRACTOR_TEST_TAG, "Testing itag: " + itag +", url:" + testUrl);
+                        Log.d(EXTRACTOR_TEST_TAG, "Testing itag: " + itag + ", url:" + testUrl);
                         signal.countDown();
                     }
                 };
@@ -131,9 +132,9 @@ public class ExtractorTestCases {
                 final YouTubeExtractor ytEx = new YouTubeExtractor(getInstrumentation()
                         .getTargetContext()) {
                     @Override
-                    public void  onExtractionComplete(SparseArray<YtFile> ytFiles, VideoMeta videoMeta) {
+                    public void onExtractionComplete(SparseArray<YtFile> ytFiles, VideoMeta videoMeta) {
                         assertEquals(expMeta.getVideoId(), videoMeta.getVideoId());
-                        assertEquals(expMeta.getTitle(),videoMeta.getTitle());
+                        assertEquals(expMeta.getTitle(), videoMeta.getTitle());
                         assertEquals(expMeta.getAuthor(), videoMeta.getAuthor());
                         assertEquals(expMeta.getChannelId(), videoMeta.getChannelId());
                         assertEquals(expMeta.getVideoLength(), videoMeta.getVideoLength());
@@ -141,7 +142,7 @@ public class ExtractorTestCases {
                         assertNotNull(ytFiles);
                         int itag = ytFiles.keyAt(new Random().nextInt(ytFiles.size()));
                         testUrl = ytFiles.get(itag).getUrl();
-                        Log.d(EXTRACTOR_TEST_TAG, "Testing itag: " + itag +", url:" + testUrl);
+                        Log.d(EXTRACTOR_TEST_TAG, "Testing itag: " + itag + ", url:" + testUrl);
                         signal.countDown();
                     }
                 };
