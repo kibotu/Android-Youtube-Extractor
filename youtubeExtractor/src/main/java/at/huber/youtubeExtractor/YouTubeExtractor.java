@@ -77,14 +77,26 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
 
     static {
         // http://en.wikipedia.org/wiki/YouTube#Quality_and_formats
-
+        // https://github.com/rg3/youtube-dl/blob/40a051fa9f48000f311f243c40e3cae588420738/youtube_dl/extractor/youtube.py#L379
+        // https://github.com/jdf76/plugin.video.youtube/blob/bf9a361d44f4841192233ef8a4411dc74a538ec0/resources/lib/youtube_plugin/youtube/helper/video_info.py#L22
         // Video and Audio
-        FORMAT_MAP.put(17, new Format(17, "3gp", 144, Format.VCodec.MPEG4, Format.ACodec.AAC, 24, false));
-        FORMAT_MAP.put(36, new Format(36, "3gp", 240, Format.VCodec.MPEG4, Format.ACodec.AAC, 32, false));
         FORMAT_MAP.put(5, new Format(5, "flv", 240, Format.VCodec.H263, Format.ACodec.MP3, 64, false));
-        FORMAT_MAP.put(43, new Format(43, "webm", 360, Format.VCodec.VP8, Format.ACodec.VORBIS, 128, false));
+        FORMAT_MAP.put(6, new Format(6, "flv", 270, Format.VCodec.H263, Format.ACodec.MP3, 64, false));
+        FORMAT_MAP.put(17, new Format(17, "3gp", 144, Format.VCodec.MPEG4, Format.ACodec.AAC, 24, false));
         FORMAT_MAP.put(18, new Format(18, "mp4", 360, Format.VCodec.H264, Format.ACodec.AAC, 96, false));
         FORMAT_MAP.put(22, new Format(22, "mp4", 720, Format.VCodec.H264, Format.ACodec.AAC, 192, false));
+        FORMAT_MAP.put(34, new Format(34, "3gp", 360, Format.VCodec.H264, Format.ACodec.AAC, 128, false));
+        FORMAT_MAP.put(35, new Format(35, "flv", 480, Format.VCodec.H264, Format.ACodec.AAC, 128, false));
+        FORMAT_MAP.put(36, new Format(36, "3gp", 240, Format.VCodec.MPEG4, Format.ACodec.AAC, 32, false));
+        FORMAT_MAP.put(37, new Format(37, "mp4", 1080, Format.VCodec.H264, Format.ACodec.AAC, 192, false));
+        FORMAT_MAP.put(38, new Format(38, "mp4", 3072, Format.VCodec.H264, Format.ACodec.AAC, 192, false));
+        FORMAT_MAP.put(43, new Format(43, "webm", 360, Format.VCodec.VP8, Format.ACodec.VORBIS, 128, false));
+        FORMAT_MAP.put(44, new Format(44, "webm", 480, Format.VCodec.VP8, Format.ACodec.VORBIS, 128, false));
+        FORMAT_MAP.put(45, new Format(45, "webm", 720, Format.VCodec.VP8, Format.ACodec.VORBIS, 192, false));
+        FORMAT_MAP.put(46, new Format(46, "webm", 1080, Format.VCodec.VP8, Format.ACodec.VORBIS, 192, false));
+        FORMAT_MAP.put(59, new Format(59, "mp4", 480, Format.VCodec.H264, Format.ACodec.AAC, 128, false));
+        FORMAT_MAP.put(78, new Format(78, "mp4", 480, Format.VCodec.H264, Format.ACodec.AAC, 128, false));
+
 
         // Dash Video
         FORMAT_MAP.put(160, new Format(160, "mp4", 144, Format.VCodec.H264, Format.ACodec.NONE, true));
