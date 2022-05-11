@@ -1,17 +1,17 @@
-Android based YouTube url extractor
+Android based YouTube url extractor [![Build Status](https://app.travis-ci.com/kibotu/android-youtubeExtractor.svg?branch=master)](https://app.travis-ci.com/kibotu/android-youtubeExtractor)
 =======================================================
 
 These are the urls to the YouTube video or audio files, so you can stream or download them.
 It features an age verification circumvention and a signature deciphering method (mainly for vevo videos).
 
-* Builds: [![JitPack](https://jitpack.io/v/HaarigerHarald/android-youtubeExtractor.svg)](https://jitpack.io/#HaarigerHarald/android-youtubeExtractor)
+* Builds: [![](https://jitpack.io/v/kibotu/Android-Youtube-Extractor.svg)](https://jitpack.io/#kibotu/Android-Youtube-Extractor)
 * Dependency: [js-evaluator-for-android](https://github.com/evgenyneu/js-evaluator-for-android)
 
 ## Gradle
 
 To always build from the latest commit with all updates. Add the JitPack repository:
 
-```java
+```groovy
 repositories {
     maven { url "https://jitpack.io" }
 }
@@ -19,8 +19,8 @@ repositories {
 
 And the dependency:
 
-```java	
-implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+```groovy
+implementation 'com.github.kibotu:Android-Youtube-Extractor:Tag'
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ new YouTubeExtractor(this) {
     public void onExtractionComplete(SparseArray<YtFile> ytFiles, VideoMeta vMeta) {
         if (ytFiles != null) {
             int itag = 22;
-	    String downloadUrl = ytFiles.get(itag).getUrl();
+	        String downloadUrl = ytFiles.get(itag).getUrl();
         }
     }
 }.extract(youtubeLink);
