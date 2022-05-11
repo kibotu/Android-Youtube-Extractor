@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "at.huber.youtubeDownloader"
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 31
         versionCode 5
-        versionName "2.1"
+        versionName "3.0.0"
     }
     buildTypes {
         release {
@@ -29,4 +29,6 @@ dependencies {
     implementation project(':youtubeExtractor')
     implementation 'org.aspectj:aspectjrt:1.8.13'
     implementation 'com.googlecode.mp4parser:isoparser:1.1.22'
+    implementation "androidx.appcompat:appcompat:1.4.1"
+    implementation "com.google.android.material:material:1.6.0"
 }

@@ -1,18 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "at.huber.sampleDownload"
         minSdkVersion 14
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 22
+        targetSdkVersion 31
         versionCode 2
-        versionName "2.1"
+        versionName "3.10.1"
     }
 }
 
 dependencies {
     implementation project(':youtubeExtractor')
+    implementation "androidx.appcompat:appcompat:1.4.1"
+    implementation "com.google.android.material:material:1.6.0"
 }

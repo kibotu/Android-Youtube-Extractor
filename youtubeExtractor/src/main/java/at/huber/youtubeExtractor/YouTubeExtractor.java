@@ -4,10 +4,11 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.util.SparseArray;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.evgenii.jsevaluator.JsEvaluator;
 import com.evgenii.jsevaluator.interfaces.JsCallback;
@@ -162,7 +163,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
      * @deprecated Use {@link #extract(String)} instead.
      */
     public void extract(String youtubeLink, boolean parseDashManifest, boolean includeWebM) {
-        this.execute(youtubeLink);
+        execute(youtubeLink);
     }
 
     /**
@@ -171,7 +172,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
      * @param youtubeLink the youtube page link or video id
      */
     public void extract(String youtubeLink) {
-        this.execute(youtubeLink);
+        execute(youtubeLink);
     }
 
     protected abstract void onExtractionComplete(@Nullable SparseArray<YtFile> ytFiles, @Nullable VideoMeta videoMeta);

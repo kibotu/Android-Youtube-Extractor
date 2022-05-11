@@ -1,5 +1,6 @@
 package at.huber.youtubeDownloader;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
@@ -17,6 +18,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +31,7 @@ import at.huber.youtubeExtractor.VideoMeta;
 import at.huber.youtubeExtractor.YouTubeExtractor;
 import at.huber.youtubeExtractor.YtFile;
 
-public class DownloadActivity extends Activity {
+public class DownloadActivity extends AppCompatActivity {
 
     private static final int ITAG_FOR_AUDIO = 140;
 
@@ -68,6 +71,7 @@ public class DownloadActivity extends Activity {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void getYoutubeDownloadUrl(String youtubeLink) {
         new YouTubeExtractor(this) {
 

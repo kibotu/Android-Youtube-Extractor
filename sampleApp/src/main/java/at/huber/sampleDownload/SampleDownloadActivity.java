@@ -1,5 +1,6 @@
 package at.huber.sampleDownload;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
@@ -15,11 +16,13 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import at.huber.youtubeExtractor.VideoMeta;
 import at.huber.youtubeExtractor.YouTubeExtractor;
 import at.huber.youtubeExtractor.YtFile;
 
-public class SampleDownloadActivity extends Activity {
+public class SampleDownloadActivity extends AppCompatActivity {
 
     private static String youtubeLink;
 
@@ -56,6 +59,7 @@ public class SampleDownloadActivity extends Activity {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void getYoutubeDownloadUrl(String youtubeLink) {
         new YouTubeExtractor(this) {
 
