@@ -2,13 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 31
-        versionCode 3
-        versionName '3.0.0'
+        targetSdkVersion 32
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
 }
@@ -33,7 +31,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.kibotu"
                 artifactId = 'youtube-extractor'
-                version = "3.0.0"
+                version = "3.1.0"
             }
         }
     }
