@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 32
+        targetSdkVersion 33
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
     lintOptions {
@@ -17,15 +17,12 @@ android {
 
 dependencies {
 
-    implementation('com.github.evgenyneu:js-evaluator-for-android:v5.0.0') {
-        //https://github.com/evgenyneu/js-evaluator-for-android/blob/master/jsevaluator/build.gradle#L33
-        exclude module: 'appcompat-v7'
-    }
+    implementation 'com.github.kibotu:js-evaluator-for-android:6.0.0'
 
-    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.annotation:annotation:1.5.0'
 
-    androidTestImplementation 'androidx.test:runner:1.4.0'
-    androidTestImplementation 'androidx.test:rules:1.4.0'
+    androidTestImplementation 'androidx.test:runner:1.5.1'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
 }
 
 afterEvaluate {
@@ -35,7 +32,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.kibotu"
                 artifactId = 'youtube-extractor'
-                version = "3.1.0"
+                version = "3.1.1"
             }
         }
     }
