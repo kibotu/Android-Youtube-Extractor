@@ -32,7 +32,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.kibotu"
                 artifactId = 'youtube-extractor'
-                version = "3.1.1"
+                version = "4.0.0"
             }
         }
     }
